@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>课程文件上传与下载</title>
+</head>
+<body>
+    <h1>课程文件上传</h1>
+
+    <p>支持格式：docx / pptx / xlsx / jpg / png / cdr / zip / 7z / rar</p>
+    <p>单个文件大小 ≤ 100MB</p>
+
+    <form id="uploadForm">
+        <input type="file" id="fileInput" required />
+        <br><br>
+        <button type="submit">上传文件</button>
+    </form>
+
+    <p id="status"></p>
+
+    <hr>
+
+    <h2>文件下载区</h2>
+    <p>
+        👉 <a href="https://github.com/你的用户名/class-file-upload/tree/main/uploads" target="_blank">
+        点击进入文件下载页面
+        </a>
+    </p>
+
+<script>
+document.getElementById("uploadForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("status").innerText =
+        "⚠️ GitHub 不支持网页直接上传大文件，请使用老师提供的上传方式（见说明）。";
+});
+</script>
+
+</body>
+</html>
